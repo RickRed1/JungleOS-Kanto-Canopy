@@ -337,7 +337,8 @@ export default function App() {
         <div>
         {activeTab === 'Vaults' && (
       <div>
-      {/* Gold Union Vault & Bail Loan Underwriter */}
+{activeTab === 'Vaults' && (
+        {/* Gold Union Vault & Bail Loan Underwriter */}
 {activeTab === 'Vaults' && (
         <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#eab308', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
@@ -393,6 +394,7 @@ export default function App() {
             </div>
           </div>
 
+)}
           <button 
             type="submit"
             style={{ background: '#eab308', color: '#000', fontWeight: 'bold', padding: '0.6rem', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '0.85rem', marginTop: '0.3rem' }}
@@ -425,7 +427,8 @@ export default function App() {
       <div>
       <div>
       <div>
-      {/* GODSOURCEGLOBAL Sovereign Whitepaper & Architecture Docs */}
+{activeTab === 'Docs' && (
+        {/* GODSOURCEGLOBAL Sovereign Whitepaper & Architecture Docs */}
       <div style={{ background: '#0a0f1d', border: '2px solid #3b82f6', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#3b82f6', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           📜 Sovereign Whitepaper & System Architecture
@@ -443,6 +446,7 @@ export default function App() {
             </p>
           </div>
 
+)}
 )}
           <div style={{ background: '#111827', padding: '0.8rem', borderRadius: '6px', border: '1px solid #1f2937' }}>
             <strong style={{ color: '#10b981' }}>2. Bail Bond LTV Underwriting Engine</strong>
