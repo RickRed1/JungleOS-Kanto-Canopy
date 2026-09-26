@@ -338,7 +338,8 @@ export default function App() {
         {activeTab === 'Vaults' && (
       <div>
       {/* Gold Union Vault & Bail Loan Underwriter */}
-      <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
+{activeTab === 'Vaults' && (
+        <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#eab308', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           🪙 Gold Union Vault & Bail Loan Underwriter
         </h3>
@@ -362,6 +363,7 @@ export default function App() {
             </select>
           </div>
 
+)}
           <div style={{ display: 'flex', gap: '0.5rem' }}>
             <div style={{ flex: 1 }}>
               <label style={{ fontSize: '0.75rem', color: '#eab308', display: 'block', marginBottom: '0.3rem' }}>PURITY (KARAT):</label>
@@ -433,13 +435,15 @@ export default function App() {
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.75rem' }} id="docs">
-          <div style={{ background: '#111827', padding: '0.8rem', borderRadius: '6px', border: '1px solid #1f2937' }}>
+{activeTab === 'Docs' && (
+            <div style={{ background: '#111827', padding: '0.8rem', borderRadius: '6px', border: '1px solid #1f2937' }}>
             <strong style={{ color: '#eab308' }}>1. Gold Union Asset-Backed Bridge</strong>
             <p style={{ color: '#9ca3af', marginTop: '0.3rem', lineHeight: '1.4' }}>
               Bridges physical precious metals (gold jewelry, bullion, coins, watches) from storefront appraisal (Torrance, CA operations) into verifiable on-chain collateral representations.
             </p>
           </div>
 
+)}
           <div style={{ background: '#111827', padding: '0.8rem', borderRadius: '6px', border: '1px solid #1f2937' }}>
             <strong style={{ color: '#10b981' }}>2. Bail Bond LTV Underwriting Engine</strong>
             <p style={{ color: '#9ca3af', marginTop: '0.3rem', lineHeight: '1.4' }}>
