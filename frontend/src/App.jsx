@@ -340,6 +340,8 @@ export default function App() {
         {activeTab === 'Vaults' && (
       <div>
 {activeTab === 'Vaults' && (
+  {activeTab === 'Vaults' && (
+)}
         {/* Gold Union Vault & Bail Loan Underwriter */}
 {activeTab === 'Vaults' && (
 {activeTab === 'Vaults' && (
@@ -434,6 +436,8 @@ export default function App() {
       <div>
       <div>
 {activeTab === 'Docs' && (
+  {activeTab === 'Docs' && (
+)}
         {/* GODSOURCEGLOBAL Sovereign Whitepaper & Architecture Docs */}
 {activeTab === 'Docs' && (
         <div style={{ background: '#0a0f1d', border: '2px solid #3b82f6', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
