@@ -715,6 +715,7 @@ export default function App() {
             <button onClick={() => setActiveTab('Notary' style={{ width: '100%', marginTop: '1.5rem', padding: '0.6rem', background: '#dc2626', color: '#ffffff', fontWeight: 'bold', borderRadius: '6px', border: '2px solid #ffffff', cursor: 'pointer' }}>Back to Vault Interface</button>
           </div>
         ) : (
+)}
           <>
             <div style={{ background: '#071326', padding: '1rem', borderRadius: '16px', border: '2px solid #dc2626' }}>
               <div style={{ fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '0.6rem', textAlign: 'center' }}>You build. They pay. You get paid.</div>
