@@ -357,6 +357,7 @@ export default function App() {
       <div {activeTab === 'Vaults' && (
       <div {activeTab === 'Vaults' && (
       {activeTab === 'Vaults' && (
+{activeTab === 'Vaults' && (
       <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#eab308', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           🪙 Gold Union Vault & Bail Loan Underwriter
