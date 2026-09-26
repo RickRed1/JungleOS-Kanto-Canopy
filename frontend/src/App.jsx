@@ -339,6 +339,7 @@ export default function App() {
 {activeTab === 'Vaults' && (
   {activeTab === 'Vaults' && (
         {activeTab === 'Vaults' && (
+{activeTab === "Vaults" && (
       <div>
 {activeTab === 'Vaults' && (
   {activeTab === 'Vaults' && (
@@ -423,6 +424,7 @@ export default function App() {
         </div>
 
 )}        </div>
+)}
         </div>
         </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -440,6 +442,7 @@ export default function App() {
       <div>
       <div>
       <div>
+{activeTab === "Docs" && (
       <div>
 {activeTab === 'Docs' && (
   {activeTab === 'Docs' && (
@@ -487,6 +490,7 @@ export default function App() {
 
 )}
 </div>
+)}
         </div>
         </div>
         </div>
