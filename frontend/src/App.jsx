@@ -340,7 +340,8 @@ export default function App() {
 {activeTab === 'Vaults' && (
         {/* Gold Union Vault & Bail Loan Underwriter */}
 {activeTab === 'Vaults' && (
-        <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
+{activeTab === 'Vaults' && (
+          <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#eab308', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           🪙 Gold Union Vault & Bail Loan Underwriter
         </h3>
@@ -411,7 +412,8 @@ export default function App() {
             </div>
         </div>
         </div>
-        </div>
+
+)}        </div>
         </div>
         </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -429,7 +431,8 @@ export default function App() {
       <div>
 {activeTab === 'Docs' && (
         {/* GODSOURCEGLOBAL Sovereign Whitepaper & Architecture Docs */}
-      <div style={{ background: '#0a0f1d', border: '2px solid #3b82f6', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
+{activeTab === 'Docs' && (
+        <div style={{ background: '#0a0f1d', border: '2px solid #3b82f6', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#3b82f6', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           📜 Sovereign Whitepaper & System Architecture
         </h3>
@@ -464,6 +467,7 @@ export default function App() {
         </div>
       </div>
 
+)}
 </div>
         </div>
         </div>
