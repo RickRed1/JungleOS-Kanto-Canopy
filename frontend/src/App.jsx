@@ -361,6 +361,7 @@ export default function App() {
       {activeTab === 'Vaults' && (
       {activeTab === 'Docs' && (
       {activeTab === 'Vaults' && (
+{activeTab === 'Vaults' && (
       <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#eab308', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           🪙 Gold Union Vault & Bail Loan Underwriter
@@ -717,6 +718,7 @@ export default function App() {
             <button onClick={() => setActiveTab('Notary' style={{ width: '100%', marginTop: '1.5rem', padding: '0.6rem', background: '#dc2626', color: '#ffffff', fontWeight: 'bold', borderRadius: '6px', border: '2px solid #ffffff', cursor: 'pointer' }}>Back to Vault Interface</button>
           </div>
         ) : (
+)}
 )}
 )}
           <>
@@ -845,6 +847,7 @@ export default function App() {
       {activeTab === 'Vaults' && (
 {activeTab === 'Vaults' && (
       {activeTab === 'Vaults' && (
+{activeTab === 'Vaults' && (
       <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#eab308', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           🪙 Gold Union Vault & Bail Loan Underwriter
@@ -1206,6 +1209,7 @@ export default function App() {
           </div>
         ) : (
           <>
+)}
             <div style={{ background: '#071326', padding: '1rem', borderRadius: '16px', border: '2px solid #dc2626' }}>
               <div style={{ fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '0.6rem', textAlign: 'center' }}>You build. They pay. You get paid.</div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', textAlign: 'center', marginBottom: '0.8rem' }}>
@@ -1333,6 +1337,7 @@ export default function App() {
       {activeTab === 'Vaults' && (
       {activeTab === 'Docs' && (
       {activeTab === 'Vaults' && (
+{activeTab === 'Vaults' && (
       <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#eab308', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           🪙 Gold Union Vault & Bail Loan Underwriter
@@ -1689,6 +1694,7 @@ export default function App() {
             <button onClick={() => setActiveTab('Notary' style={{ width: '100%', marginTop: '1.5rem', padding: '0.6rem', background: '#dc2626', color: '#ffffff', fontWeight: 'bold', borderRadius: '6px', border: '2px solid #ffffff', cursor: 'pointer' }}>Back to Vault Interface</button>
           </div>
         ) : (
+)}
 )}
 )}
           <>
