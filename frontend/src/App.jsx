@@ -337,7 +337,8 @@ export default function App() {
         <div>
         {activeTab === 'Vaults' && (
 {activeTab === 'Vaults' && (
-        <div>
+        {activeTab === 'Vaults' && (
+      <div>
 {activeTab === 'Vaults' && (
         {/* Gold Union Vault & Bail Loan Underwriter */}
 {activeTab === 'Vaults' && (
@@ -423,6 +424,7 @@ export default function App() {
             </div>
           </div>
       </div>
+    )}
 
 
 {activeTab === 'Docs' && (
