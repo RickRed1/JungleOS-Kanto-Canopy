@@ -336,7 +336,8 @@ export default function App() {
         <div>
         <div>
         {activeTab === 'Vaults' && (
-      <div>
+{activeTab === 'Vaults' && (
+        <div>
 {activeTab === 'Vaults' && (
         {/* Gold Union Vault & Bail Loan Underwriter */}
 {activeTab === 'Vaults' && (
@@ -363,8 +364,8 @@ export default function App() {
               <option value="SilverAndPlatinum">Silver & Platinum</option>
               <option value="Bullion">Bullion (At Market Price)</option>
             </select>
-          </div>
-
+</div>
+)}
 )}
           <div style={{ display: 'flex', gap: '0.5rem' }}>
             <div style={{ flex: 1 }}>
@@ -424,7 +425,8 @@ export default function App() {
       </div>
 
 
-      <div>
+{activeTab === 'Docs' && (
+        <div>
       <div>
       <div>
       <div>
@@ -447,8 +449,8 @@ export default function App() {
             <p style={{ color: '#9ca3af', marginTop: '0.3rem', lineHeight: '1.4' }}>
               Bridges physical precious metals (gold jewelry, bullion, coins, watches) from storefront appraisal (Torrance, CA operations) into verifiable on-chain collateral representations.
             </p>
-          </div>
-
+</div>
+)}
 )}
 )}
           <div style={{ background: '#111827', padding: '0.8rem', borderRadius: '6px', border: '1px solid #1f2937' }}>
