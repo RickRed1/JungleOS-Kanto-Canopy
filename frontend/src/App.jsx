@@ -344,6 +344,7 @@ export default function App() {
         <div>
         <div>
         {activeTab === 'Vaults' && (
+      {activeTab === 'Vaults' && (
       <div>
       {/* Gold Union Vault & Bail Loan Underwriter */}
       <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
@@ -429,6 +430,7 @@ export default function App() {
           </div>
         )}
       </div>
+      )}
       )}
 
 
