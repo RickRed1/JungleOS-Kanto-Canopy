@@ -717,6 +717,7 @@ export default function App() {
           </div>
         ) : (
 )}
+)}
           <>
             <div style={{ background: '#071326', padding: '1rem', borderRadius: '16px', border: '2px solid #dc2626' }}>
               <div style={{ fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '0.6rem', textAlign: 'center' }}>You build. They pay. You get paid.</div>
