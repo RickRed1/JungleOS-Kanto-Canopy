@@ -126,7 +126,7 @@ export default function App() {
         const s = await p.getSigner();
         const addr = await s.getAddress();
         setSigner(s); setWalletAddress(addr);
-        setStatusMessage(`Connected: ${addr.substring(0, 6...${addr.substring(addr.length - 4`);
+      setStatusMessage(`Connected: ${addr.substring(0, 6)}...${addr.substring(addr.length - 4)}`);
       } catch (err) { setStatusMessage('Error: ' + err.message); }
     } else {
       setWalletAddress('0x96E5...0A074');
@@ -324,6 +324,7 @@ export default function App() {
       </div>
 
       {activeTab === 'Vaults' && (
+      {activeTab === 'Vaults' && (
       <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background: '#071326', borderTop: '2px solid #dc2626', display: 'flex', justifyContent: 'space-around', padding: '0.6rem 0', zIndex: 1000 }}>
         <button onClick={() => setActiveTab('Notary' style={{ background: 'none', border: 'none', color: activeTab === 'Notary' ? '#dc2626' : '#ffffff', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}><span>🏠</span> Home</button>
         <button onClick={() => setActiveTab('Vaults' style={{ background: 'none', border: 'none', color: activeTab === 'Vaults' ? '#dc2626' : '#ffffff', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}><span>💼</span> Vaults</button>
@@ -437,6 +438,8 @@ export default function App() {
             </div>
           </div>
       </div>
+)}
+
 )}
 )}
 
