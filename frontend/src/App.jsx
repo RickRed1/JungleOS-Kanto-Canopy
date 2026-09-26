@@ -353,6 +353,7 @@ export default function App() {
           {activeTab === 'Vaults' && (
   <div {activeTab === "Vaults" && (
 {activeTab === "Vaults" && (
+      <div {activeTab === 'Vaults' && (
       <div style={{ background: '#0a0f1d', border: '2px solid #eab308', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#eab308', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           🪙 Gold Union Vault & Bail Loan Underwriter
@@ -437,6 +438,7 @@ export default function App() {
           </div>
       </div>
 )}
+)}
 
 )}
 )}
@@ -461,6 +463,7 @@ export default function App() {
         {activeTab === 'Docs' && (
   <div {activeTab === "Docs" && (
 {activeTab === "Docs" && (
+      <div {activeTab === 'Docs' && (
       <div style={{ background: '#0a0f1d', border: '2px solid #3b82f6', borderRadius: '8px', padding: '1.2rem', margin: '1rem 0', color: '#fff', textAlign: 'left' }}>
         <h3 style={{ color: '#3b82f6', marginBottom: '0.4rem', fontSize: '1.0rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
           📜 Sovereign Whitepaper & System Architecture
