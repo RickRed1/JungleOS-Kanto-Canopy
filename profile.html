@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — BlueSky Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        openseaDark: '#04111d',
+                        openseaCard: '#262b2f',
+                        openseaBlue: '#2081e2',
+                        openseaHover: '#1868b7'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-openseaDark text-white font-sans antialiased selection:bg-openseaBlue selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="flex items-center justify-between px-6 py-4 border-b border-gray-800 sticky top-0 bg-openseaDark/90 backdrop-blur-md z-50">
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='index.html'">
+            <div class="w-10 h-10 bg-openseaBlue rounded-full flex items-center justify-center text-xl font-bold shadow-lg shadow-blue-500/30">
+                <i class="fa-solid fa-cloud"></i>
+            </div>
+            <span class="text-xl font-bold tracking-tight">BlueSky</span>
+        </div>
+        
+        <div class="hidden md:flex items-center bg-[#202225] rounded-xl px-4 py-3 w-96 border border-transparent focus-within:border-openseaBlue transition">
+            <i class="fa-solid fa-magnifying-glass text-gray-400 mr-3"></i>
+            <input type="text" placeholder="Search items, collections, and accounts" class="bg-transparent border-none outline-none text-sm w-full text-gray-200 placeholder-gray-400">
+        </div>
+
+        <div class="flex items-center space-x-6 font-medium text-sm">
+            <a href="index.html" class="hover:text-openseaBlue transition">Home</a>
+            <a href="explore.html" class="hover:text-openseaBlue transition">Explore</a>
+            <button onclick="alert('Wallet connection initialized')" class="bg-openseaBlue hover:bg-openseaHover px-5 py-2.5 rounded-xl font-semibold transition shadow-lg shadow-blue-500/20">
+                Connect Wallet
+            </button>
+        </div>
+    </nav>
+
+    <!-- Profile Banner -->
+    <div class="h-48 md:h-64 bg-gradient-to-r from-blue-900 via-openseaBlue to-purple-900 w-full relative"></div>
+
+    <!-- Profile Header Details -->
+    <div class="max-w-7xl mx-auto px-6 relative pb-8 border-b border-gray-800">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end -mt-16 mb-6 gap-4">
+            <div class="flex items-end space-x-5">
+                <div class="w-32 h-32 rounded-2xl bg-openseaCard border-4 border-openseaDark bg-cover bg-center shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop');"></div>
+                <div class="mb-1">
+                    <h1 class="text-2xl font-extrabold flex items-center">RickRed1_Vault <i class="fa-solid fa-circle-check text-openseaBlue text-sm ml-2"></i></h1>
+                    <p class="text-gray-400 text-sm mt-0.5">0x71C...3B92 • Joined September 2025</p>
+                </div>
+            </div>
+            <div class="flex space-x-3">
+                <button class="bg-[#303339] hover:bg-gray-800 border border-gray-700 px-4 py-2.5 rounded-xl text-sm font-semibold transition flex items-center space-x-2">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share</span>
+                </button>
+                <button class="bg-[#303339] hover:bg-gray-800 border border-gray-700 px-4 py-2.5 rounded-xl text-sm font-semibold transition">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Profile Navigation Tabs -->
+        <div class="flex space-x-8 text-sm font-semibold text-gray-400 overflow-x-auto pt-2">
+            <div class="text-openseaBlue border-b-2 border-openseaBlue pb-3 cursor-pointer flex items-center space-x-2">
+                <i class="fa-solid fa-grip"></i>
+                <span>Collected (4)</span>
+            </div>
+            <div class="hover:text-white pb-3 cursor-pointer flex items-center space-x-2 transition">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Created (2)</span>
+            </div>
+            <div class="hover:text-white pb-3 cursor-pointer flex items-center space-x-2 transition">
+                <i class="fa-solid fa-tag"></i>
+                <span>Active Listings (2)</span>
+            </div>
+            <div class="hover:text-white pb-3 cursor-pointer flex items-center space-x-2 transition">
+                <i class="fa-solid fa-heart"></i>
+                <span>Favorited (12)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Grid Content -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+        <div class="flex justify-between items-center mb-6">
+            <div class="bg-[#202225] rounded-xl px-4 py-2.5 flex items-center space-x-3 text-sm w-full max-w-sm border border-gray-800">
+                <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                <input type="text" placeholder="Search collected items..." class="bg-transparent border-none outline-none text-sm w-full text-gray-200">
+            </div>
+            <div class="bg-[#303339] border border-gray-700 rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-300">
+                Recently Received
+            </div>
+        </div>
+
+        <!-- NFT Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Card Item 1 -->
+            <div onclick="window.location.href='item.html'" class="bg-[#303339] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition cursor-pointer group">
+                <div class="h-64 bg-cover bg-center group-hover:scale-105 transition duration-300" style="background-image: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=500&auto=format&fit=crop');"></div>
+                <div class="p-4">
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Abstract Dimensions</p>
+                    <h3 class="font-bold text-base mb-2 truncate">Prism Core #0192</h3>
+                    <div class="flex justify-between items-center bg-[#202225] p-2.5 rounded-xl">
+                        <div>
+                            <span class="text-[10px] text-gray-400 block">List Price</span>
+                            <span class="text-sm font-bold flex items-center"><i class="fa-brands fa-ethereum mr-1 text-openseaBlue"></i> 0.82 ETH</span>
+                        </div>
+                        <span class="text-xs text-openseaBlue font-semibold bg-openseaBlue/10 px-2.5 py-1 rounded-lg">Listed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Item 2 -->
+            <div class="bg-[#303339] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition cursor-pointer group">
+                <div class="h-64 bg-cover bg-center group-hover:scale-105 transition duration-300" style="background-image: url('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=500&auto=format&fit=crop');"></div>
+                <div class="p-4">
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Neon Cyberpunks</p>
+                    <h3 class="font-bold text-base mb-2 truncate">Cyberpunk Runner #44</h3>
+                    <div class="flex justify-between items-center bg-[#202225] p-2.5 rounded-xl">
+                        <div>
+                            <span class="text-[10px] text-gray-400 block">List Price</span>
+                            <span class="text-sm font-bold flex items-center"><i class="fa-brands fa-ethereum mr-1 text-openseaBlue"></i> 2.10 ETH</span>
+                        </div>
+                        <span class="text-xs text-openseaBlue font-semibold bg-openseaBlue/10 px-2.5 py-1 rounded-lg">Listed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Item 3 -->
+            <div class="bg-[#303339] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition cursor-pointer group">
+                <div class="h-64 bg-cover bg-center group-hover:scale-105 transition duration-300" style="background-image: url('https://images.unsplash.com/photo-1618172193763-c511deb635ca?q=80&w=500&auto=format&fit=crop');"></div>
+                <div class="p-4">
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Ethereal Landscapes</p>
+                    <h3 class="font-bold text-base mb-1 truncate">Horizon Dawn #7</h3>
+                    <div class="flex justify-between items-center bg-[#202225] p-2.5 rounded-xl">
+                        <div>
+                            <span class="text-[10px] text-gray-400 block">Floor / Acquired</span>
+                            <span class="text-sm font-bold flex items-center"><i class="fa-brands fa-ethereum mr-1 text-openseaBlue"></i> 0.45 ETH</span>
+                        </div>
+                        <span class="text-xs text-gray-400 font-semibold bg-gray-800 px-2.5 py-1 rounded-lg">Owned</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Item 4 -->
+            <div class="bg-[#303339] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition cursor-pointer group">
+                <div class="h-64 bg-cover bg-center group-hover:scale-105 transition duration-300" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=500&auto=format&fit=crop');"></div>
+                <div class="p-4">
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Pixelated Universe</p>
+                    <h3 class="font-bold text-base mb-1 truncate">Voxel Starship #11</h3>
+                    <div class="flex justify-between items-center bg-[#202225] p-2.5 rounded-xl">
+                        <div>
+                            <span class="text-[10px] text-gray-400 block">Floor / Acquired</span>
+                            <span class="text-sm font-bold flex items-center"><i class="fa-brands fa-ethereum mr-1 text-openseaBlue"></i> 1.25 ETH</span>
+                        </div>
+                        <span class="text-xs text-gray-400 font-semibold bg-gray-800 px-2.5 py-1 rounded-lg">Owned</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
