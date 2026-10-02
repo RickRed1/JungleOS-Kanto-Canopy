@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile — BlueSky Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        openseaDark: '#04111d',
+                        openseaCard: '#262b2f',
+                        openseaBlue: '#2081e2',
+                        openseaHover: '#1868b7'
+                    }
+                }
+            }
+        }
+
+        async function connectWallet() {
+            let provider, address;
+            try {
+                if (typeof window.ethereum !== 'undefined') {
+                    provider = new ethers.BrowserProvider(window.ethereum);
+                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    address = accounts[0];
+                } else {
+                    const randomWallet = ethers.Wallet.createRandom();
+                    address = randomWallet.address;
+                    alert(`No Web3 extension detected. Generated test session wallet: ${address.substring(0,6)}...`);
+                }
+                const shortAddr = address.substring(0, 6) + '...' + address.substring(address.length - 4);
+                document.querySelectorAll('.wallet-btn').forEach(btn => {
+                    btn.innerHTML = `<i class="fa-solid fa-wallet mr-2"></i> ${shortAddr}`;
+                    btn.classList.add('bg-green-600', 'hover:bg-green-700');
+                    btn.classList.remove('bg-openseaBlue', 'hover:bg-openseaHover');
+                });
+                
+                // Trigger Portfolio Scan
+                document.getElementById('wallet-display-address').innerText = address;
+            } catch (error) {
+                console.error("Connection error", error);
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-openseaDark text-white font-sans antialiased selection:bg-openseaBlue selection:text-white">
+
+    <nav class="flex items-center justify-between px-6 py-4 border-b border-gray-800 sticky top-0 bg-openseaDark/90 backdrop-blur-md z-50">
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='index.html'">
+            <div class="w-10 h-10 bg-openseaBlue rounded-full flex items-center justify-center text-xl font-bold shadow-lg shadow-blue-500/30">
+                <i class="fa-solid fa-cloud"></i>
+            </div>
+            <span class="text-xl font-bold tracking-tight">BlueSky</span>
+        </div>
+        
+        <div class="hidden md:flex items-center bg-[#202225] rounded-xl px-4 py-3 w-96 border border-transparent focus-within:border-openseaBlue transition">
+            <i class="fa-solid fa-magnifying-glass text-gray-400 mr-3"></i>
+            <input type="text" placeholder="Search items, collections, and accounts" class="bg-transparent border-none outline-none text-sm w-full text-gray-200 placeholder-gray-400">
+        </div>
+
+        <div class="flex items-center space-x-6 font-medium text-sm">
+            <a href="index.html" class="hover:text-openseaBlue transition">Home</a>
+            <a href="explore.html" class="hover:text-openseaBlue transition">Explore</a>
+            <a href="profile.html" class="text-openseaBlue font-bold">Profile</a>
+            <button onclick="connectWallet()" class="wallet-btn bg-openseaBlue hover:bg-openseaHover px-5 py-2.5 rounded-xl font-semibold transition shadow-lg shadow-blue-500/20">
+                Connect Wallet
+            </button>
+        </div>
+    </nav>
+
+    <div class="h-48 md:h-64 bg-gradient-to-r from-blue-900 via-openseaBlue to-purple-900 w-full relative"></div>
+
+    <main class="max-w-7xl mx-auto px-6 py-10">
+        <div class="mb-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold">Connected Profile Portfolio</h1>
+                <p id="wallet-display-address" class="text-xs text-gray-400 mt-1 font-mono">Connect wallet to index chain assets...</p>
+            </div>
+        </div>
+        
+        <div id="nft-portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="bg-[#303339] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition cursor-pointer group">
+                <div class="h-64 bg-cover bg-center group-hover:scale-105 transition duration-300" style="background-image: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=500&auto=format&fit=crop');"></div>
+                <div class="p-4">
+                    <p class="text-[10px] text-openseaBlue uppercase tracking-widest font-bold">Polygon Unfiltered</p>
+                    <h3 class="font-bold text-base mb-2 truncate">Prism Core #0192</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
