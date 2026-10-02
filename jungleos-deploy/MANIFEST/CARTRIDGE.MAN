@@ -1,0 +1,35 @@
+CARTRIDGE
+├── ID: YELLOW_REBORN
+├── PLATFORM: GAME_BOY / GAME_BOY_COLOR
+├── GENERATION: NEXT
+├── ROOT_EXECUTABLE: /YELLOW_REBORN.NXT
+│
+├── BOOT
+│   └── /BOOT/
+│
+├── SYSTEM
+│   └── /SYSTEM/
+│
+├── WORLD
+│   └── /GAME/WORLD/
+│
+├── POKEMON
+│   └── /POKEMON/
+│
+├── BATTLE
+│   └── /BATTLE/
+│
+├── AUDIO
+│   └── /AUDIO/
+│
+├── GRAPHICS
+│   └── /GRAPHICS/
+│
+├── DATA
+│   └── /DATA/
+│
+├── SAVE
+│   └── /SAVE/
+│
+└── REBORN
+    └── /REBORN/

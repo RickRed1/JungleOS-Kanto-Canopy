@@ -1,0 +1,5 @@
+# OpenClaw Auto-Generated File Registry
+YELLOW_REBORN.NXT -> Executable Container
+SYSTEM/KERNEL.BIN -> Core Hardware Abstraction
+YELLOW/YELLOW_ENGINE.BIN -> Classic Compatibility Layer
+REBORN/REBORN_ENGINE.BIN -> Next-Gen Expansion Engine
