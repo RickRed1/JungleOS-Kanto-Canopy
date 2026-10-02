@@ -9,59 +9,47 @@ export default function JungleOSApp() {
 
   if (!initialized) {
     return (
-      <div className="fixed inset-0 w-full h-full bg-[#07130e] flex items-center justify-center p-4 font-mono select-none overflow-auto">
-        <div className="max-w-md w-full bg-[#112219] border-2 border-[#e89438] rounded-2xl p-6 shadow-2xl relative my-auto">
+      <div style={{ position: 'fixed', inset: 0, width: '100%', height: '100%', backgroundColor: '#07130e', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px', fontFamily: 'monospace', userSelect: 'none', overflowY: 'auto' }}>
+        <div style={{ maxWidth: '400px', width: '100%', backgroundColor: '#112219', border: '2px solid #e89438', borderRadius: '16px', padding: '24px', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7)', position: 'relative', margin: 'auto' }}>
           
-          <div className="flex justify-center mb-3">
-            <div className="p-3 bg-[#173826] border border-[#236b43] rounded-full text-[#45cc7c] shadow-md">
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '12px' }}>
+            <div style={{ padding: '12px', backgroundColor: '#173826', border: '1px solid #236b43', borderRadius: '50%', color: '#45cc7c' }}>
               <Zap size={32} />
             </div>
           </div>
           
-          <h1 className="text-xl font-extrabold text-center tracking-wider text-[#e89438] mb-1">PROFESSOR OAK'S LAB</h1>
-          <p className="text-xs text-center text-[#9bcab0] mb-5">Welcome to JungleOS: Kanto Canopy Edition! Register Trainer Identity.</p>
+          <h1 style={{ fontSize: '1.25rem', fontWeight: 'bold', textAlign: 'center', letterSpacing: '0.05em', color: '#e89438', marginBottom: '4px' }}>PROFESSOR OAK'S LAB</h1>
+          <p style={{ fontSize: '0.75rem', textAlign: 'center', color: '#9bcab0', marginBottom: '20px' }}>Welcome to JungleOS: Kanto Canopy Edition! Register Trainer Identity.</p>
           
-          <div className="space-y-4">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div>
-              <label className="block text-[11px] uppercase tracking-wider text-[#e89438] font-bold mb-1">Trainer Name</label>
+              <label style={{ display: 'block', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#e89438', fontWeight: 'bold', marginBottom: '4px' }}>Trainer Name</label>
               <input 
                 type="text" 
                 value={trainerName}
                 onChange={(e) => setTrainerName(e.target.value)}
-                className="w-full bg-[#091811] border-2 border-[#236b43] rounded-xl px-3 py-2 text-sm text-white font-bold focus:outline-none focus:border-[#e89438] shadow-inner"
+                style={{ width: '100%', backgroundColor: '#091811', border: '2px solid #236b43', borderRadius: '12px', padding: '8px 12px', fontSize: '0.875rem', color: 'white', fontWeight: 'bold', outline: 'none' }}
               />
             </div>
 
             <div>
-              <label className="block text-[11px] uppercase tracking-wider text-[#e89438] font-bold mb-2">CHOOSE STARTER POKÉMON:</label>
-              <div className="grid grid-cols-3 gap-2">
+              <label style={{ display: 'block', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#e89438', fontWeight: 'bold', marginBottom: '8px' }}>CHOOSE STARTER POKÉMON:</label>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '8px' }}>
                 <button
                   onClick={() => setStarter('Bulbasaur')}
-                  className={`py-2.5 px-1 text-xs font-bold rounded-xl border-2 transition-all flex flex-col items-center gap-1 ${
-                    starter === 'Bulbasaur' 
-                      ? 'bg-[#3b9c62] border-white text-white shadow-lg scale-105' 
-                      : 'bg-[#3b9c62] border-[#236b43] text-white hover:bg-[#45b070]'
-                  }`}
+                  style={{ padding: '10px 4px', fontSize: '12px', fontWeight: 'bold', borderRadius: '12px', border: starter === 'Bulbasaur' ? '2px solid white' : '2px solid #236b43', backgroundColor: '#3b9c62', color: 'white', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', transform: starter === 'Bulbasaur' ? 'scale(1.05)' : 'scale(1)' }}
                 >
                   🌿 Bulbasaur
                 </button>
                 <button
                   onClick={() => setStarter('Charmander')}
-                  className={`py-2.5 px-1 text-xs font-bold rounded-xl border-2 transition-all flex flex-col items-center gap-1 ${
-                    starter === 'Charmander' 
-                      ? 'bg-[#d15826] border-white text-white shadow-lg scale-105' 
-                      : 'bg-[#d15826] border-[#e89438] text-white hover:bg-[#e06530]'
-                  }`}
+                  style={{ padding: '10px 4px', fontSize: '12px', fontWeight: 'bold', borderRadius: '12px', border: starter === 'Charmander' ? '2px solid white' : '2px solid #e89438', backgroundColor: '#d15826', color: 'white', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', transform: starter === 'Charmander' ? 'scale(1.05)' : 'scale(1)' }}
                 >
                   🔥 Charmander
                 </button>
                 <button
                   onClick={() => setStarter('Squirtle')}
-                  className={`py-2.5 px-1 text-xs font-bold rounded-xl border-2 transition-all flex flex-col items-center gap-1 ${
-                    starter === 'Squirtle' 
-                      ? 'bg-[#327ba8] border-white text-white shadow-lg scale-105' 
-                      : 'bg-[#327ba8] border-[#327ba8] text-white hover:bg-[#3d90c4]'
-                  }`}
+                  style={{ padding: '10px 4px', fontSize: '12px', fontWeight: 'bold', borderRadius: '12px', border: starter === 'Squirtle' ? '2px solid white' : '2px solid #327ba8', backgroundColor: '#327ba8', color: 'white', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', transform: starter === 'Squirtle' ? 'scale(1.05)' : 'scale(1)' }}
                 >
                   💧 Squirtle
                 </button>
@@ -70,7 +58,7 @@ export default function JungleOSApp() {
 
             <button
               onClick={() => setInitialized(true)}
-              className="w-full mt-2 bg-[#3b9c62] hover:bg-[#45b070] text-white font-extrabold py-3 px-4 rounded-xl text-sm tracking-wider uppercase shadow-xl transition-all border border-[#45cc7c]"
+              style={{ width: '100%', marginTop: '8px', backgroundColor: '#3b9c62', color: 'white', fontWeight: 'extrabold', padding: '12px 16px', borderRadius: '12px', fontSize: '0.875rem', letterSpacing: '0.05em', textTransform: 'uppercase', border: '1px solid #45cc7c', cursor: 'pointer' }}
             >
               INITIALIZE JUNGLE OS
             </button>
@@ -81,72 +69,72 @@ export default function JungleOSApp() {
   }
 
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden bg-cover bg-center select-none font-mono flex flex-col justify-between" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000&auto=format&fit=crop")' }}>
+    <div style={{ position: 'fixed', inset: 0, width: '100%', height: '100%', overflow: 'hidden', backgroundImage: 'url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2000&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center', userSelect: 'none', fontFamily: 'monospace', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
       
       {/* Desktop Grid Icons */}
-      <div className="absolute top-4 left-4 flex flex-col gap-6 z-10">
-        <button onClick={() => setActiveWindow('terminal')} className="flex flex-col items-center group w-20">
-          <div className="w-12 h-12 bg-[#173023]/95 border-2 border-[#236b43] rounded-xl flex items-center justify-center text-[#45cc7c] shadow-xl group-hover:scale-105 transition-all">
+      <div style={{ position: 'absolute', top: '16px', left: '16px', display: 'flex', flexDirection: 'column', gap: '24px', zIndex: 10 }}>
+        <button onClick={() => setActiveWindow('terminal')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '80px' }}>
+          <div style={{ width: '48px', height: '48px', backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#45cc7c', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.5)' }}>
             <Laptop size={24} />
           </div>
-          <span className="text-white text-[11px] mt-1 font-bold drop-shadow-md">PokéTerm</span>
+          <span style={{ color: 'white', fontSize: '11px', marginTop: '4px', fontWeight: 'bold', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>PokéTerm</span>
         </button>
 
-        <button onClick={() => setActiveWindow('pokedex')} className="flex flex-col items-center group w-20">
-          <div className="w-12 h-12 bg-[#173023]/95 border-2 border-[#236b43] rounded-xl flex items-center justify-center text-[#e89438] shadow-xl group-hover:scale-105 transition-all">
+        <button onClick={() => setActiveWindow('pokedex')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '80px' }}>
+          <div style={{ width: '48px', height: '48px', backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#e89438', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.5)' }}>
             <Smartphone size={24} />
           </div>
-          <span className="text-white text-[11px] mt-1 font-bold drop-shadow-md">Pokédex</span>
+          <span style={{ color: 'white', fontSize: '11px', marginTop: '4px', fontWeight: 'bold', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>Pokédex</span>
         </button>
 
-        <button onClick={() => setActiveWindow('notes')} className="flex flex-col items-center group w-20">
-          <div className="w-12 h-12 bg-[#173023]/95 border-2 border-[#236b43] rounded-xl flex items-center justify-center text-[#9bcab0] shadow-xl group-hover:scale-105 transition-all">
+        <button onClick={() => setActiveWindow('notes')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '80px' }}>
+          <div style={{ width: '48px', height: '48px', backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#9bcab0', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.5)' }}>
             <Clipboard size={24} />
           </div>
-          <span className="text-white text-[11px] mt-1 font-bold drop-shadow-md">Notes</span>
+          <span style={{ color: 'white', fontSize: '11px', marginTop: '4px', fontWeight: 'bold', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>Notes</span>
         </button>
       </div>
 
       {/* Active Modal / Window View */}
       {activeWindow && activeWindow !== 'desktop' && (
-        <div className="absolute inset-10 bg-[#0c1c14]/95 border-2 border-[#236b43] rounded-2xl flex flex-col z-30 shadow-2xl backdrop-blur-md my-auto">
-          <div className="bg-[#173023] px-4 py-3 border-b-2 border-[#236b43] flex justify-between items-center rounded-t-xl">
-            <span className="text-[#e89438] text-xs font-extrabold uppercase tracking-wider">JungleOS::{activeWindow}</span>
-            <button onClick={() => setActiveWindow('desktop')} className="text-white font-bold px-2.5 py-0.5 text-xs bg-[#a83812] border border-[#d15826] rounded-lg">✕</button>
+        <div style={{ position: 'absolute', inset: '40px', backgroundColor: '#0c1c14', border: '2px solid #236b43', borderRadius: '16px', display: 'flex', flexDirection: 'column', zIndex: 30, boxShadow: '0 25px 50px -12px rgba(0,0,0,0.7)', margin: 'auto' }}>
+          <div style={{ backgroundColor: '#173023', padding: '12px 16px', borderBottom: '2px solid #236b43', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTopLeftRadius: '14px', borderTopRightRadius: '14px' }}>
+            <span style={{ color: '#e89438', fontSize: '12px', fontWeight: 'extrabold', textTransform: 'uppercase', letterSpacing: '0.05em' }}>JungleOS::{activeWindow}</span>
+            <button onClick={() => setActiveWindow('desktop')} style={{ color: 'white', fontWeight: 'bold', padding: '2px 8px', fontSize: '12px', backgroundColor: '#a83812', border: '1px solid #d15826', borderRadius: '8px', cursor: 'pointer' }}>✕</button>
           </div>
-          <div className="p-6 flex-1 overflow-auto text-[#9bcab0] text-sm">
+          <div style={{ padding: '24px', flex: 1, overflowY: 'auto', color: '#9bcab0', fontSize: '0.875rem' }}>
             {activeWindow === 'terminal' && (
               <div>
-                <p className="text-[#e89438] font-bold mb-2">PokéTerm v1.0.4 - CLI Environment</p>
-                <p className="text-xs text-[#9bcab0] mb-4">Connected to trainer: <span className="text-white font-bold">{trainerName}</span> | Starter: <span className="text-[#e89438] font-bold">{starter}</span></p>
-                <div className="bg-black/90 p-4 rounded-xl border border-[#236b43] font-mono text-xs shadow-inner">
-                  <p className="text-[#45cc7c]">$ system-status --canopy</p>
-                  <p className="text-[#9bcab0] mt-1">CPU: Kanto Canopy Node active</p>
-                  <p className="text-[#9bcab0]">Memory: 6.2 / 16 GB allocated</p>
-                  <p className="text-[#e89438] mt-2">$ _</p>
+                <p style={{ color: '#e89438', fontWeight: 'bold', marginBottom: '8px' }}>PokéTerm v1.0.4 - CLI Environment</p>
+                <p style={{ fontSize: '0.75rem', color: '#9bcab0', marginBottom: '16px' }}>Connected to trainer: <span style={{ color: 'white', fontWeight: 'bold' }}>{trainerName}</span> | Starter: <span style={{ color: '#e89438', fontWeight: 'bold' }}>{starter}</span></p>
+                <div style={{ backgroundColor: 'rgba(0,0,0,0.9)', padding: '16px', borderRadius: '12px', border: '1px solid #236b43', fontFamily: 'monospace', fontSize: '12px' }}>
+                  <p style={{ color: '#45cc7c' }}>$ system-status --canopy</p>
+                  <p style={{ color: '#9bcab0', marginTop: '4px' }}>CPU: Kanto Canopy Node active</p>
+                  <p style={{ color: '#9bcab0' }}>Memory: 6.2 / 16 GB allocated</p>
+                  <p style={{ color: '#e89438', marginTop: '8px' }}>$ _</p>
                 </div>
               </div>
             )}
             {activeWindow === 'pokedex' && (
               <div>
-                <h2 className="text-lg font-extrabold text-[#e89438] mb-3">Trainer Registry & Pokedex</h2>
-                <p className="text-xs text-[#9bcab0] mb-4">Active Trainer: <span className="text-white font-bold">{trainerName}</span></p>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="p-4 bg-[#173023] border-2 border-[#236b43] rounded-xl shadow">
-                    <p className="text-xs text-[#e89438] font-bold mb-1">Starter Unit</p>
-                    <p className="text-base font-extrabold text-white">{starter}</p>
+                <h2 style={{ fontSize: '1.125rem', fontWeight: 'extrabold', color: '#e89438', marginBottom: '12px' }}>Trainer Registry & Pokedex</h2>
+                <p style={{ fontSize: '0.75rem', color: '#9bcab0', marginBottom: '16px' }}>Active Trainer: <span style={{ color: 'white', fontWeight: 'bold' }}>{trainerName}</span></p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '12px' }}>
+                  <div style={{ padding: '16px', backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px' }}>
+                    <p style={{ fontSize: '12px', color: '#e89438', fontWeight: 'bold', marginBottom: '4px' }}>Starter Unit</p>
+                    <p style={{ fontSize: '1rem', fontWeight: 'extrabold', color: 'white' }}>{starter}</p>
                   </div>
-                  <div className="p-4 bg-[#173023] border-2 border-[#236b43] rounded-xl shadow">
-                    <p className="text-xs text-[#e89438] font-bold mb-1">Network Status</p>
-                    <p className="text-base font-extrabold text-[#45cc7c]">Polygon / Mainnet Connected</p>
+                  <div style={{ padding: '16px', backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px' }}>
+                    <p style={{ fontSize: '12px', color: '#e89438', fontWeight: 'bold', marginBottom: '4px' }}>Network Status</p>
+                    <p style={{ fontSize: '1rem', fontWeight: 'extrabold', color: '#45cc7c' }}>Polygon Connected</p>
                   </div>
                 </div>
               </div>
             )}
             {activeWindow === 'notes' && (
               <div>
-                <h2 className="text-lg font-extrabold text-[#e89438] mb-3">System Log & Notes</h2>
-                <textarea className="w-full h-48 bg-black/80 border-2 border-[#236b43] rounded-xl p-3 text-xs text-[#9bcab0] focus:outline-none focus:border-[#e89438] shadow-inner" defaultValue="Deployment note: Kanto Canopy core initialized successfully. Verify ZK-lease validation scripts before sync." />
+                <h2 style={{ fontSize: '1.125rem', fontWeight: 'extrabold', color: '#e89438', marginBottom: '12px' }}>System Log & Notes</h2>
+                <textarea style={{ width: '100%', height: '192px', backgroundColor: 'rgba(0,0,0,0.8)', border: '2px solid #236b43', borderRadius: '12px', padding: '12px', fontSize: '12px', color: '#9bcab0', outline: 'none' }} defaultValue="Deployment note: Kanto Canopy core initialized successfully. Verify ZK-lease validation scripts before sync." />
               </div>
             )}
           </div>
@@ -154,75 +142,75 @@ export default function JungleOSApp() {
       )}
 
       {/* Spacer */}
-      <div className="flex-1"></div>
+      <div style={{ flex: 1 }}></div>
 
-      {/* Bottom Cards Dock matching exact reference RGB tokens */}
-      <div className="px-3 pb-3 grid grid-cols-2 sm:grid-cols-4 gap-2 z-20">
+      {/* Bottom Cards Dock */}
+      <div style={{ padding: '12px', display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '8px', zIndex: 20 }}>
         
         {/* Safari Card */}
-        <div className="bg-[#173023] border-2 border-[#236b43] rounded-xl p-3 shadow-2xl backdrop-blur">
-          <div className="flex justify-between items-center mb-1">
-            <span className="text-xs font-extrabold text-white flex items-center gap-1">🌿 Safari</span>
-            <span className="text-[10px] text-[#e89438] font-extrabold bg-[#112219] px-1.5 py-0.5 rounded border border-[#236b43]">HP 60</span>
+        <div style={{ backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px', padding: '12px', boxShadow: '0 20px 25px -5px rgba(0,0,0,0.5)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+            <span style={{ fontSize: '12px', fontWeight: 'extrabold', color: 'white' }}>🌿 Safari</span>
+            <span style={{ fontSize: '10px', color: '#e89438', fontWeight: 'extrabold', backgroundColor: '#112219', padding: '2px 6px', borderRadius: '4px', border: '1px solid #236b43' }}>HP 60</span>
           </div>
-          <div className="flex items-center gap-2 mb-2 text-[#327ba8]">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', color: '#327ba8' }}>
             <Globe size={18} />
-            <span className="text-[11px] text-[#9bcab0] font-semibold">Browse Web</span>
+            <span style={{ fontSize: '11px', color: '#9bcab0', fontWeight: 'semibold' }}>Browse</span>
           </div>
-          <button onClick={() => alert('Opening Safari browser...')} className="w-full py-1 bg-[#236b43] hover:bg-[#2c8554] text-xs text-white font-extrabold rounded-lg uppercase tracking-wider shadow">Launch</button>
+          <button onClick={() => alert('Opening Safari...')} style={{ width: '100%', padding: '4px', backgroundColor: '#236b43', color: 'white', fontSize: '12px', fontWeight: 'extrabold', borderRadius: '8px', border: 'none', cursor: 'pointer', textTransform: 'uppercase' }}>Launch</button>
         </div>
 
         {/* PokéBoy Games Card */}
-        <div className="bg-[#173023] border-2 border-[#236b43] rounded-xl p-3 shadow-2xl backdrop-blur">
-          <div className="flex justify-between items-center mb-1">
-            <span className="text-xs font-extrabold text-white flex items-center gap-1">🎮 PokéBoy</span>
-            <span className="text-[10px] text-[#e89438] font-extrabold bg-[#112219] px-1.5 py-0.5 rounded border border-[#236b43]">HP 70</span>
+        <div style={{ backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px', padding: '12px', boxShadow: '0 20px 25px -5px rgba(0,0,0,0.5)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+            <span style={{ fontSize: '12px', fontWeight: 'extrabold', color: 'white' }}>🎮 PokéBoy</span>
+            <span style={{ fontSize: '10px', color: '#e89438', fontWeight: 'extrabold', backgroundColor: '#112219', padding: '2px 6px', borderRadius: '4px', border: '1px solid #236b43' }}>HP 70</span>
           </div>
-          <div className="flex items-center gap-2 mb-2 text-[#9070c0]">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', color: '#9070c0' }}>
             <Gamepad2 size={18} />
-            <span className="text-[11px] text-[#9bcab0] font-semibold">Play Games</span>
+            <span style={{ fontSize: '11px', color: '#9bcab0', fontWeight: 'semibold' }}>Games</span>
           </div>
-          <button onClick={() => alert('Launching PokéBoy Arcade...')} className="w-full py-1 bg-[#236b43] hover:bg-[#2c8554] text-xs text-white font-extrabold rounded-lg uppercase tracking-wider shadow">Launch</button>
+          <button onClick={() => alert('Launching PokéBoy...')} style={{ width: '100%', padding: '4px', backgroundColor: '#236b43', color: 'white', fontSize: '12px', fontWeight: 'extrabold', borderRadius: '8px', border: 'none', cursor: 'pointer', textTransform: 'uppercase' }}>Launch</button>
         </div>
 
         {/* PidgeyMail Card */}
-        <div className="bg-[#173023] border-2 border-[#236b43] rounded-xl p-3 shadow-2xl backdrop-blur">
-          <div className="flex justify-between items-center mb-1">
-            <span className="text-xs font-extrabold text-white flex items-center gap-1">✉️ PidgeyMail</span>
-            <span className="text-[10px] text-[#e89438] font-extrabold bg-[#112219] px-1.5 py-0.5 rounded border border-[#236b43]">HP 60</span>
+        <div style={{ backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px', padding: '12px', boxShadow: '0 20px 25px -5px rgba(0,0,0,0.5)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+            <span style={{ fontSize: '12px', fontWeight: 'extrabold', color: 'white' }}>✉️ Mail</span>
+            <span style={{ fontSize: '10px', color: '#e89438', fontWeight: 'extrabold', backgroundColor: '#112219', padding: '2px 6px', borderRadius: '4px', border: '1px solid #236b43' }}>HP 60</span>
           </div>
-          <div className="flex items-center gap-2 mb-2 text-[#327ba8]">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', color: '#327ba8' }}>
             <Mail size={18} />
-            <span className="text-[11px] text-[#9bcab0] font-semibold">Check Mail</span>
+            <span style={{ fontSize: '11px', color: '#9bcab0', fontWeight: 'semibold' }}>Inbox</span>
           </div>
-          <button onClick={() => alert('Opening PidgeyMail inbox...')} className="w-full py-1 bg-[#236b43] hover:bg-[#2c8554] text-xs text-white font-extrabold rounded-lg uppercase tracking-wider shadow">Open</button>
+          <button onClick={() => alert('Opening Mail...')} style={{ width: '100%', padding: '4px', backgroundColor: '#236b43', color: 'white', fontSize: '12px', fontWeight: 'extrabold', borderRadius: '8px', border: 'none', cursor: 'pointer', textTransform: 'uppercase' }}>Open</button>
         </div>
 
         {/* SnapShots Card */}
-        <div className="bg-[#173023] border-2 border-[#236b43] rounded-xl p-3 shadow-2xl backdrop-blur">
-          <div className="flex justify-between items-center mb-1">
-            <span className="text-xs font-extrabold text-white flex items-center gap-1">📷 SnapShots</span>
-            <span className="text-[10px] text-[#e89438] font-extrabold bg-[#112219] px-1.5 py-0.5 rounded border border-[#236b43]">HP 60</span>
+        <div style={{ backgroundColor: '#173023', border: '2px solid #236b43', borderRadius: '12px', padding: '12px', boxShadow: '0 20px 25px -5px rgba(0,0,0,0.5)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+            <span style={{ fontSize: '12px', fontWeight: 'extrabold', color: 'white' }}>📷 Photos</span>
+            <span style={{ fontSize: '10px', color: '#e89438', fontWeight: 'extrabold', backgroundColor: '#112219', padding: '2px 6px', borderRadius: '4px', border: '1px solid #236b43' }}>HP 60</span>
           </div>
-          <div className="flex items-center gap-2 mb-2 text-[#e89438]">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', color: '#e89438' }}>
             <Camera size={18} />
-            <span className="text-[11px] text-[#9bcab0] font-semibold">View Photos</span>
+            <span style={{ fontSize: '11px', color: '#9bcab0', fontWeight: 'semibold' }}>Gallery</span>
           </div>
-          <button onClick={() => alert('Opening SnapShots Gallery...')} className="w-full py-1 bg-[#236b43] hover:bg-[#2c8554] text-xs text-white font-extrabold rounded-lg uppercase tracking-wider shadow">Gallery</button>
+          <button onClick={() => alert('Opening Photos...')} style={{ width: '100%', padding: '4px', backgroundColor: '#236b43', color: 'white', fontSize: '12px', fontWeight: 'extrabold', borderRadius: '8px', border: 'none', cursor: 'pointer', textTransform: 'uppercase' }}>View</button>
         </div>
 
       </div>
 
       {/* Bottom System Status Bar */}
-      <div className="h-10 bg-[#07130e] border-t-2 border-[#236b43] px-4 flex items-center justify-between text-xs text-[#9bcab0] z-30">
-        <div className="flex items-center gap-2">
-          <span className="px-2 py-0.5 bg-[#173023] border border-[#236b43] rounded-md text-white font-extrabold flex items-center gap-1">🌿 Safari</span>
+      <div style={{ height: '40px', backgroundColor: '#07130e', borderTop: '2px solid #236b43', padding: '0 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '12px', color: '#9bcab0', zIndex: 30 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{ padding: '2px 8px', backgroundColor: '#173023', border: '1px solid #236b43', borderRadius: '6px', color: 'white', fontWeight: 'extrabold' }}>🌿 Safari</span>
         </div>
-        <div className="flex items-center gap-3 text-xs font-bold">
-          <span className="flex items-center gap-1 text-[#e89438]"><Zap size={14} /> 18%</span>
-          <span className="text-white">HP <span className="bg-[#236b43] text-white px-1.5 py-0.5 rounded ml-0.5 font-extrabold">60</span></span>
-          <span className="text-[#9bcab0]">6.2/16</span>
-          <span className="text-[#9bcab0] flex items-center gap-1"><Battery size={14} className="text-[#45cc7c]" /> 100%</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold' }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#e89438' }}><Zap size={14} /> 18%</span>
+          <span style={{ color: 'white' }}>HP <span style={{ backgroundColor: '#236b43', color: 'white', padding: '2px 6px', borderRadius: '4px', marginLeft: '2px', fontWeight: 'extrabold' }}>60</span></span>
+          <span style={{ color: '#9bcab0' }}>6.2/16</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#9bcab0' }}><Battery size={14} style={{ color: '#45cc7c' }} /> 100%</span>
         </div>
       </div>
 
